@@ -7,7 +7,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background-color: #bbbbbb;
+    background-image: linear-gradient(to right, rgb(103, 37, 83), rgb(106, 76, 150));
     
 }
 
@@ -22,6 +22,7 @@ body{
 .logo h1{
     color: #fff;
    font-size: 100px;
+   margin-top: 80px;
 }
 
 /*-------------------------------------------- Container --------------------------------------------*/
@@ -29,8 +30,7 @@ body{
 .container-slider{
     position: relative;
     width: 100%;
-    height: 100vh;
-    background-color: #bbbbbb;
+    height: 78vh;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -83,6 +83,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    animation: prev 2s infinite;
+
 }
 
 #prev-button img, #next-button img{
@@ -95,7 +98,27 @@ body{
     height: 100%;
 }
 
+#prev-button{
+}
+
+@keyframes prev {
+    0%{
+        border-radius: 50%;
+
+    }
+    50%{
+        background-color: rgb(181, 133, 226);
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 50%;
+
+    }
+}
+
+
 .balls-click{
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     /* display: none; */
@@ -107,44 +130,9 @@ body{
 
 /*-------------------------------------------- Navigation --------------------------------------------*/
 
-.navigation{
-    width: 100px;
-    height: 40px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.conect-ball{
-    border: 2px solid rgb(255, 255, 255);
-    margin: 0 6px 0 6px;
-    width: 15px;
-    height: 13.5px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: .4s;
-}
-
-.conect-ball:hover{
-    background-color: rgb(151, 17, 192);
-}
 
 
 
-.n1:checked ~ .navigation .m1{
-    background-color: rgb(0,0,0);
-}
-.n2:checked ~ .navigation .m2{
-    background-color: rgb(0,0,0);
-}
-.n3:checked ~ .navigation .m3{
-    background-color: rgb(0,0,0);
-}
-.n4:checked ~ .navigation .m4{
-    background-color: rgb(0,0,0);
-}
 
 /*-------------------------------------------- Media Query --------------------------------------------*/
 
