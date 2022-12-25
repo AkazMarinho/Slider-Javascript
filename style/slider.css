@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #bbbbbb;
+    
+}
+
+/*-------------------------------------------- Logo --------------------------------------------*/
+   
+.logo{
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+}
+
+.logo h1{
+    color: #fff;
+   font-size: 100px;
+}
+
+/*-------------------------------------------- Container --------------------------------------------*/
+
+.container-slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #bbbbbb;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+.slide-inside{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.img-slider{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container-images{
+    background-color:transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.slider{
+    transition: opacity .5s;
+    opacity: 0;
+    position: absolute;
+    width: 100%; 
+    border-radius: 15px;  
+}
+
+.on{
+    opacity: 1;
+}
+
+#prev-button, #next-button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#prev-button img, #next-button img{
+    width: 80%;
+    height: 80%;
+}
+
+#prev-button img:hover, #next-button img:hover{
+    width: 100%;
+    height: 100%;
+}
+
+.balls-click{
+    display: flex;
+    justify-content: center;
+    /* display: none; */
+}
+
+#slideB{
+    margin:15px;
+}
+
+/*-------------------------------------------- Navigation --------------------------------------------*/
+
+.navigation{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conect-ball{
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 6px 0 6px;
+    width: 15px;
+    height: 13.5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.conect-ball:hover{
+    background-color: rgb(151, 17, 192);
+}
+
+
+
+.n1:checked ~ .navigation .m1{
+    background-color: rgb(0,0,0);
+}
+.n2:checked ~ .navigation .m2{
+    background-color: rgb(0,0,0);
+}
+.n3:checked ~ .navigation .m3{
+    background-color: rgb(0,0,0);
+}
+.n4:checked ~ .navigation .m4{
+    background-color: rgb(0,0,0);
+}
+
+/*-------------------------------------------- Media Query --------------------------------------------*/
+
+
+@media screen and (max-width: 1000px){
+    .logo h1{
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 600px){
+    .logo h1{
+        font-size: 50px;
+    }
+}
+
